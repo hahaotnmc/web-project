@@ -43,7 +43,6 @@ async function handleAddcart(productid: number) {
     if (!product) {
         throw new Error('Product not found');
     }
-    console.log(product);
     
 
     // Thêm sản phẩm vào giỏ hàng
@@ -57,19 +56,20 @@ async function handleAddcart(productid: number) {
         );
     } else {
         // Nếu chưa có, thêm sản phẩm mới vào giỏ hàng
-        const newCartItem: CartWithProduct = {
-            id: cart.length + 1, // Tạo ID mới, hoặc thay bằng cách sinh ID khác nếu cần
-            productId: productid,
-            quantity: 1,
-            product: product,
-        };
-        updatedCart = [...cart, newCartItem];
+        const maxId = cart.reduce((max:any, item:any) => (item.id > max ? item.id : max), 0);
+            const newCartItem: CartWithProduct = {
+                id: maxId + 1, // ID là lớn nhất hiện có + 1
+                productId: productid,
+                quantity: 1,
+                product: product,
+            };
+            updatedCart = [...cart, newCartItem];
     }
 
 
     // Lưu lại giỏ hàng vào localStorage
     localStorage.setItem('cart', JSON.stringify(updatedCart));
-    console.log('Cart updated:', updatedCart);
+        alert("Sản phẩm: "+ product.name+" vừa được thêm vào giỏ hàng");
 
 }
 export default function TestProduct() {
@@ -83,7 +83,7 @@ export default function TestProduct() {
     return (
         <div>
             <div >
-                <Menu />
+                <Menu/>
             </div>
 
             <div className=" container mx-auto mb-5 px-4 py-8">

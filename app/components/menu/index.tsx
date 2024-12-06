@@ -1,4 +1,7 @@
 import { Link } from "@remix-run/react";
+import { useEffect } from "react";
+
+
 
 export default function Menu (){
    
@@ -23,10 +26,6 @@ export default function Menu (){
           {/* Text */}
           <span className="ml-2 font-medium">Giỏ hàng</span>
 
-          {/* Badge số lượng sản phẩm */}
-          <span className="absolute top-0 right-0 transform translate-x-2 -translate-y-2 bg-red-500 text-white text-xs font-bold rounded-full px-2 py-1">
-            3
-          </span>
         </Link>
       </header>);
 }
