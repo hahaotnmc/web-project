@@ -16,7 +16,6 @@ Mo terminal , tro den file du an va dung cau lenh sau :
 
 ```sh
 npx prisma init --datasource-provider sqlite
-;
 ```
 
 Tiep theo mo terminal , tro den file du an va dung cau lenh
