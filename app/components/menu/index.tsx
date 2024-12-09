@@ -7,9 +7,15 @@ export default function Menu (){
    
     return( <header className="flex items-center justify-between px-6 py-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 shadow-lg">
         {/* Tiêu đề */}
+        <div className="">
+
         <Link to={'/'} className="text-white text-2xl font-bold tracking-wide">
           Trang chủ
         </Link>
+        <Link to={'/add'} className=" ml-4 text-white text-2xl font-bold tracking-wide">
+          Thêm sản phẩm
+        </Link>
+        </div>
 
         {/* Nút giỏ hàng */}
         <Link to={'/cart'} className="relative flex items-center bg-white text-indigo-500 hover:text-white hover:bg-indigo-600 transition-all duration-300 ease-in-out rounded-full px-4 py-2 shadow-md">

@@ -113,14 +113,11 @@ const reducer = (state:any , action: any) =>{
             break;
         }
         case DEL_PRODUCT:{
-            console.log(action.payload);
             
             const updatedProducts = state.products.filter((item: any) => {
                 return item.id !== action.payload;
             });
-            
-            console.log("Product filter: "+updatedProducts);
-            
+                      
             localStorage.setItem("cart", JSON.stringify(updatedProducts));
             Newstate = {
                 ...state,

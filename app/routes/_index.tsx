@@ -14,12 +14,17 @@ export const meta: MetaFunction = () => {
   ];
 };
 export  const loader: LoaderFunction = ()=>{
-    
+  
   return getProducts();
 }
 
+
+
+
+
 export default function Index() {
-  const products = useLoaderData<Product[]>()
+
+const products = useLoaderData<Product[]>()
 
   return (
     <div>
