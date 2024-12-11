@@ -1,45 +1,37 @@
-<<<<<<< HEAD
-# web-project
-web project
-=======
 # Welcome to Remix!
 
 - 📖 [Remix docs](https://remix.run/docs)
 
-## Development
+# Dowload thu vien
 
-Run the dev server:
+Su dung cau lenh sau de tai node_module
 
 ```shellscript
-npm run dev
+npm install
 ```
 
-## Deployment
+# khoi tao co so du lieu sqlite
 
-First, build your app for production:
+Mo terminal , tro den file du an va dung cau lenh sau :
 
 ```sh
-npm run build
+npx prisma init --datasource-provider sqlite
 ```
 
-Then run the app in production mode:
+Tiep theo mo terminal , tro den file du an va dung cau lenh
 
 ```sh
-npm start
+npx prisma migrate dev --name init
 ```
 
-Now you'll need to pick a host to deploy it to.
+# Chay du an
 
-### DIY
+Chay du an bang cau lenh duoi day:
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
+```sh
+npx run dev
+```
 
 ## Styling
 
 This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
->>>>>>> d9e8675 (initial commit)
